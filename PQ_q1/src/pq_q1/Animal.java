@@ -1,4 +1,5 @@
-import java.util.*; 
+package pq_q1;
+
 
 /**
  * description of class Animal.
@@ -6,7 +7,7 @@ import java.util.*;
  * @author M250 module team 
  * @version v1.0
  */
-class Animal
+public class Animal
 {
    // instance variables
    private int week; // a number from 1 to 52
