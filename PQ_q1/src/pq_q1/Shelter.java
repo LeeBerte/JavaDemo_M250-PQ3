@@ -20,12 +20,12 @@ public class Shelter
    {
       //complete the constructor
       animals = new ArrayList<>();
-      currentWeek = 0;
+      currentWeek = 1;
 
    }
    
    //getter for animals
-   public List<Animals> getAnimals(){
+   public List<Animal> getAnimals(){
       return animals;
    }
 
@@ -77,14 +77,16 @@ public class Shelter
 
    //returns data of animal brought in within the last month
    public void showRecentAnimals(){
-   for (Animal anAnimal : animals){
-         if(inTheLastMonth(anAnimal)){
-            System.out.println(anAnimal.getKind()
-                     .concat(" ").concat(anAnimal.getName())
-                     .concat(":").concat(anAnimal.getDescription()));
-         }
-         else{
-            System.out.println("No recent animals");
+      if (getAnimals().isEmpty()){
+         System.out.println("No recent animals");
+      }
+      else{
+         for (Animal anAnimal : animals){
+            if(inTheLastMonth(anAnimal)){
+               System.out.println(anAnimal.getKind()
+                        .concat(" ").concat(anAnimal.getName())
+                        .concat(":").concat(anAnimal.getDescription()));
+            }
          }
       }
    }
@@ -94,10 +96,8 @@ public class Shelter
          if((theAnimal.getWeek() == aWeek) 
              && (theAnimal.getKind().equals(aKind))
              && (theAnimal.getName().equals(aName))){
-                matched = true;
-          }
-          if (matched){
-             getAnimals().remove(theAnimal);
+               getAnimals().remove(theAnimal);
+                return matched = true;
           }
        }
       return matched;
