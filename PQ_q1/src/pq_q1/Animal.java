@@ -1,6 +1,5 @@
 package pq_q1;
 
-
 /**
  * description of class Animal.
  * 
