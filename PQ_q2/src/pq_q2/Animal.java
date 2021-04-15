@@ -1,6 +1,4 @@
-import java.util.*; 
-
-//***************************
+package pq_q2;
 
 /**
  * description of class Animal.
@@ -68,4 +66,23 @@ public class Animal
       description = description + " " + moreDescription;
    }
    
+
+   //override equals() 
+   @Override
+   public boolean equals(Object o)
+   {
+       Animal a = (Animal) o;
+       return getKind().equals(a.getKind())
+               && getWeek() == a.getWeek()
+               && getName().equals(a.getName());
+   }
+
+   //override hashCode()
+   @Override
+   public int hashCode()
+   {
+       return getName().length();
+   }
+
+
 }

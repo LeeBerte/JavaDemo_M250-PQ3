@@ -15,7 +15,9 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Shelter s = new Shelter();
+        s.populate();
+        s.showRecentAnimals();
+        s.homed(50, "cat", "Zoe");
     }
-    
 }
