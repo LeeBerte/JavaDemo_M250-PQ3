@@ -73,7 +73,7 @@ public class Shelter {
 
     }
 
-    // returns data of animal brought in within the last month
+    // return data of animal brought in within the last month
     public void showRecentAnimals() {
         if (getAnimals().isEmpty()) {
             System.out.println("No recent animals");
