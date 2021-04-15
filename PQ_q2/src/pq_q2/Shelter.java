@@ -57,7 +57,7 @@ public class Shelter {
     }
 
     /**
-     *   Returns boolean if the animal has been at the shelter over 4 weeks
+     *   Returns Boolean if the animal has been at the shelter over 4 weeks
      */
     public boolean inTheLastMonth(Animal anAnimal) {
         int calWeeks = 52;
