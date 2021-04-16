@@ -90,6 +90,8 @@ public class Shelter
          }
       }
    }
+
+   
    public boolean homed(int aWeek, String aKind, String aName){
       boolean matched = false;
       for (Animal theAnimal : animals) {
